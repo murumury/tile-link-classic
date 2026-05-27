@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Tile Link Classic</title>
+    <link rel="stylesheet" href="../game/game.css">
+    <link rel="stylesheet" href="./popup.css">
+  </head>
+  <body>
+    <main class="app-shell" data-game-root>
+      <header class="hud">
+        <h1 class="title">Tile Link Classic</h1>
+        <div class="hud-panel">
+          <label class="difficulty-picker">
+            <span data-i18n="mode">Mode</span>
+            <select data-difficulty aria-label="Difficulty">
+              <option value="easy">Easy</option>
+              <option value="normal">Normal</option>
+              <option value="hard">Hard</option>
+            </select>
+          </label>
+          <label class="language-picker">
+            <span data-i18n="language">Lang</span>
+            <select data-language aria-label="Language">
+              <option value="en">EN</option>
+              <option value="zh">简体中文</option>
+              <option value="zh-Hant">繁體中文</option>
+              <option value="ja">日本語</option>
+            </select>
+          </label>
+          <div class="hud-stack">
+            <span><span data-i18n="score">Score</span> <strong data-score>00000</strong></span>
+            <span><span data-i18n="best">Best</span> <strong data-best>00000</strong></span>
+          </div>
+        </div>
+      </header>
+
+      <section class="game-frame" data-game-frame aria-label="Game screen">
+        <div class="stats">
+          <span><span data-i18n="time">Time</span> <strong data-time>00:00</strong></span>
+          <span><span data-i18n="combo">Combo</span> <strong data-combo>x0</strong></span>
+          <span class="status" data-status>READY</span>
+        </div>
+        <div class="board-wrap">
+          <div class="path-layer" data-path-layer></div>
+          <div class="board" data-board></div>
+          <div class="win-overlay" data-win-overlay hidden>
+            <div class="win-panel">
+              <div class="win-ribbon" data-perfect hidden>Perfect!</div>
+              <h2 data-i18n="clearTitle">Stage Clear!</h2>
+              <p class="win-subtitle" data-i18n="clearSubtitle">Perfect!</p>
+              <div class="win-stats">
+                <span><span data-i18n="score">Score</span> <strong data-final-score>00000</strong></span>
+                <span><span data-i18n="time">Time</span> <strong data-final-time>00:00</strong></span>
+                <span><span data-i18n="maxCombo">Max Combo</span> <strong data-final-combo>x0</strong></span>
+              </div>
+              <button class="button primary play-again" type="button" data-action="play-again" data-i18n="playAgain">Play Again</button>
+            </div>
+          </div>
+          <div class="shuffle-notice" data-shuffle-notice hidden>No moves - shuffled!</div>
+        </div>
+      </section>
+
+      <section class="controls" aria-label="Game controls">
+        <button class="button primary" type="button" data-action="start" data-i18n="start">Start</button>
+        <button class="button" type="button" data-action="pause" data-i18n="pause">Pause</button>
+        <button class="button" type="button" data-action="reset" data-i18n="reset">Reset</button>
+        <button class="button" type="button" data-action="hint"><span data-i18n="hint">Hint</span> <span data-hints>0</span></button>
+        <button class="button" type="button" data-action="shuffle"><span data-i18n="shuffle">Shuffle</span> <span data-shuffles>0</span></button>
+      </section>
+    </main>
+
+    <script type="module" src="./popup.js"></script>
+  </body>
+</html>

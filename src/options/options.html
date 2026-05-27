@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Tile Link Classic Settings</title>
+    <link rel="stylesheet" href="./options.css">
+  </head>
+  <body>
+    <main class="settings-shell">
+      <h1>Settings</h1>
+
+      <form class="settings-form" data-settings-form>
+        <label class="field">
+          <span>Sound</span>
+          <input type="checkbox" name="soundEnabled">
+        </label>
+
+        <label class="field">
+          <span>Scanlines</span>
+          <input type="checkbox" name="scanlinesEnabled">
+        </label>
+
+        <label class="field">
+          <span>Difficulty</span>
+          <select name="difficulty">
+            <option value="easy">Easy</option>
+            <option value="normal">Normal</option>
+            <option value="hard">Hard</option>
+          </select>
+        </label>
+
+        <button type="submit">Save</button>
+        <p class="status" data-status></p>
+      </form>
+    </main>
+
+    <script type="module" src="./options.js"></script>
+  </body>
+</html>

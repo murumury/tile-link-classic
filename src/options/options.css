@@ -1,0 +1,70 @@
+:root {
+  color-scheme: dark;
+  --bg: #101018;
+  --panel: #181824;
+  --panel-strong: #232334;
+  --text: #f5f1de;
+  --muted: #a7a1bc;
+  --accent: #48d597;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+}
+
+.settings-shell {
+  width: min(520px, calc(100% - 32px));
+  margin: 40px auto;
+}
+
+h1 {
+  margin: 0 0 20px;
+  font-size: 24px;
+}
+
+.settings-form {
+  display: grid;
+  gap: 14px;
+}
+
+.field {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  gap: 16px;
+  padding: 14px;
+  border: 1px solid var(--panel-strong);
+  border-radius: 8px;
+  background: var(--panel);
+}
+
+select,
+button {
+  min-height: 34px;
+  border: 1px solid var(--panel-strong);
+  border-radius: 6px;
+  background: var(--bg);
+  color: var(--text);
+  font: inherit;
+}
+
+button {
+  width: max-content;
+  padding: 0 16px;
+  background: var(--accent);
+  color: #06100b;
+  cursor: pointer;
+}
+
+.status {
+  min-height: 20px;
+  margin: 0;
+  color: var(--muted);
+}
