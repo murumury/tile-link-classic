@@ -6,3 +6,4 @@ coverage/
 chrome-store-review/
 xiaohongshu/
 *.log
+.vercel
